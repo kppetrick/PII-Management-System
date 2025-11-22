@@ -1,0 +1,18 @@
+# Root level ignores
+.DS_Store
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment variables
+.env
+.env.local
+
+# Temporary files
+tmp/
+temp/
+
