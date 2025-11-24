@@ -17,7 +17,7 @@ default: &default
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
-  max_connections: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 
 development:
@@ -45,6 +45,10 @@ test:
   username: postgres
   host: 127.0.0.1
   port: 5432
+  # Increase pool size for tests to handle fixture loading
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 10 } %>
+  # Ensure connections are checked out and released properly
+  checkout_timeout: 5
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
