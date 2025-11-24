@@ -16,3 +16,10 @@
 tmp/
 temp/
 
+# Test coverage
+coverage/
+
+# Node modules
+node_modules/
+**/node_modules/
+

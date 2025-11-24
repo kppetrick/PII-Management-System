@@ -14,12 +14,15 @@ I used AI (Cursor's AI assistant) as a coding tool and assistant throughout this
 - **Encryption learning**: Used AI to learn about ECB vs CBC encryption modes. AI explained that CBC + IV is more secure and doesn't encrypt the same SSN to the same value each time (more realistic for production). Based on this, I chose CBC mode with IV.
 - **Test skeletons**: AI created test skeletons based on the code I wrote. I then wrote all the actual test implementations myself.
 - **Controller testing**: Had never written controller tests before. AI provided assistance with the first controller test, then I mimicked the pattern for the remaining controller tests.
-- **Java SSN service test help**: Used AI to help with testing the JavaSsnService in Rails, including proper mocking techniques with Mocha and handling HTTParty stubs to avoid test hangs.
-- **Troubleshooting**: Used AI to help debug compilation errors, test failures, and configuration issues (Java version mismatches, Maven setup, etc.)
 
 **Rails API:**
 - **Mocking library selection**: Asked AI what's most commonly used for mocking in Rails controller tests. AI explained that Mocha is widely used and standard practice, while built-in minitest/mock is also acceptable. Chose Mocha for cleaner syntax and because it's a common tool in Rails projects.
+- **Java SSN service test help**: Used AI to help with testing the JavaSsnService in Rails, including proper mocking techniques with Mocha and handling HTTParty stubs to avoid test hangs.
 - **Database connection debugging**: Used AI extensively to debug database connection pool exhaustion issues that prevented Rails tests from running. AI helped identify problems with parallel test execution, connection pool sizing, and multiple database instances being open simultaneously. This included troubleshooting `ActiveRecord::ConnectionTimeoutError`, fixing database.yml configuration conflicts, and implementing proper connection cleanup in test_helper.rb.
+
+**React Frontend:**
+- **CORS troubleshooting**: Used AI to debug CORS errors when connecting React frontend to Rails API. AI identified the need to uncomment and configure rack-cors in Rails, and helped troubleshoot connection issues.
+- **Tailwind CSS styling**: AI provided guidance on responsive styling with Tailwind CSS, including mobile-first design patterns, grid layouts, and component styling for both form and list components.
 
 
 ## Implementation Notes
