@@ -75,6 +75,7 @@ GEM
       securerandom (>= 0.3)
       tzinfo (~> 2.0, >= 2.0.5)
       uri (>= 0.13.1)
+    ansi (1.5.0)
     ast (2.4.3)
     base64 (0.3.0)
     bcrypt_pbkdf (1.1.1)
@@ -94,6 +95,7 @@ GEM
     debug (1.11.0)
       irb (~> 1.10)
       reline (>= 0.3.8)
+    docile (1.4.1)
     dotenv (3.1.8)
     drb (2.2.3)
     ed25519 (1.4.0)
@@ -147,6 +149,11 @@ GEM
       logger
     mini_mime (1.1.5)
     minitest (5.26.2)
+    minitest-reporters (1.7.1)
+      ansi
+      builder
+      minitest (>= 5.0)
+      ruby-progressbar
     msgpack (1.8.0)
     net-imap (0.5.12)
       date
@@ -265,6 +272,12 @@ GEM
       ffi (~> 1.12)
       logger
     securerandom (0.4.1)
+    simplecov (0.22.0)
+      docile (~> 1.1)
+      simplecov-html (~> 0.11)
+      simplecov_json_formatter (~> 0.1)
+    simplecov-html (0.13.2)
+    simplecov_json_formatter (0.1.4)
     solid_cable (3.0.12)
       actioncable (>= 7.2)
       activejob (>= 7.2)
@@ -320,10 +333,12 @@ DEPENDENCIES
   debug
   image_processing (~> 1.2)
   kamal
+  minitest-reporters
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 8.1.1)
   rubocop-rails-omakase
+  simplecov
   solid_cable
   solid_cache
   solid_queue
